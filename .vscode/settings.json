@@ -1,0 +1,31 @@
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "standard.vscode-standard",
+  },
+  "standard.enable": true,
+  "standard.autoFixOnSave": true,
+  "standard.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "standard.options": {
+    "ignore": [
+      "node_modules/**",
+      "public/javascripts/vendor/**"
+     ]
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+}

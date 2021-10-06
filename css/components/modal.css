@@ -1,0 +1,129 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1060;
+}
+
+.modal > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
+
+.modal > label {
+  position: absolute;
+  margin: 0;
+  color: transparent;
+}
+
+.modalContent {
+  position: relative;
+  margin: 0;
+  border-radius: 1rem;
+  padding: 0;
+  min-width: 60vw;
+  min-height: 60vh;
+  /* background-color: white; */
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  transition: opacity 0.5s;
+  z-index: 1070;
+}
+
+.modalContentBackground {
+  background-color: white;
+}
+
+.modalContent > div {
+  padding: 0.5rem;
+}
+
+.modalHeader,
+.modalFooter {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.modalHeader {
+  border-bottom: 1px solid var(--bsGray);
+}
+
+.modalFooter {
+  border-top: 1px solid var(--bsGray);
+}
+
+.modalBody {
+  max-width: 90vw;
+  max-height: 60vw;
+  flex: 6 0 auto;
+  display: flex;
+}
+
+.modalBody > div {
+  border-radius: 1rem;
+  /* flex: 1 0 auto; */
+}
+
+.modalBody > img {
+  border-radius: 1rem;
+}
+
+/* for threeSixty */
+.modalBody > div > div:nth-child(3) {
+  border-radius: 1rem;
+}
+
+.modalBody > div > div:nth-child(3) > img {
+  width: 100%;
+  object-fit: contain;
+}
+/* for threeSixty */
+
+@media (min-aspect-ratio: 4/3) {
+  .modalBody {
+    max-width: 120vh;
+  }
+}
+
+/* @media (min-aspect-ratio: 8/5) {
+  .modalBody {
+    max-width: 140vh;
+  }
+} */
+
+.modalNone {
+  /* display: none !important; */
+  top: -9999px !important;
+}
+
+.modalNoneHdFt {
+  display: none !important;
+}
+
+.modalOpen {
+  position: fixed !important;
+  height: 100vh !important;
+  overflow-y: hidden !important;
+}
+
+.modalOpenContent {
+  opacity: 1;
+}

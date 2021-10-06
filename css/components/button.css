@@ -1,0 +1,81 @@
+.button {
+  --buttonSize: 2rem;
+  --buttonIcon: calc(var(--buttonSize) * 0.55);
+  --buttonLabel: calc(var(--buttonSize) * 0.55);
+  width: var(--buttonSize);
+  height: var(--buttonSize);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.33);
+  display: flex;
+}
+
+.button button {
+  border-style: none;
+  border-radius: 0.5rem;
+  height: var(--buttonSize);
+  background-color: rgba(255, 255, 255, 0.8);
+  display: inline-flex;
+  align-items: center;
+  text-transform: capitalize;
+  appearance: none;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .button button:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
+
+.button label {
+  height: var(--buttonSize);
+  color: black;
+  opacity: 0.7;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .button label:hover {
+    opacity: 1;
+  }
+}
+
+.button label i {
+  border-radius: 50%;
+  width: var(--buttonSize);
+  height: var(--buttonSize);
+  font-size: var(--buttonIcon);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button label span {
+  margin-left: 0.5rem;
+  height: var(--buttonSize);
+  color: black;
+  font-size: var(--buttonLabel);
+  text-transform: capitalize;
+  display: inline-flex;
+  align-items: center;
+}
+
+.buttonCompact {
+  position: absolute;
+  margin-left: 0 !important;
+  width: var(--switchSize);
+  color: transparent !important;
+  overflow: hidden;
+}
+
+.buttonExtended {
+  display: none !important;
+}
+
+.buttonText {
+  display: none !important;
+}

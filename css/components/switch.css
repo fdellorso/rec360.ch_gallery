@@ -1,0 +1,60 @@
+.switch {
+  --switchSize: 2rem;
+  --switchIcon: calc(var(--switchSize) * 0.55);
+  --switchLabel: calc(var(--switchSize) * 0.55);
+  width: var(--switchSize);
+  height: var(--switchSize);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.33);
+}
+
+.switch input {
+  display: none;
+}
+
+.switch label {
+  height: var(--switchSize);
+  opacity: 0.5;
+  display: flex;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.switch label i {
+  border-radius: 50%;
+  width: var(--switchSize);
+  height: var(--switchSize);
+  font-size: var(--switchIcon);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+
+.switch label span {
+  margin-left: 0.5rem;
+  height: var(--switchSize);
+  color: black;
+  font-size: var(--switchLabel);
+  text-transform: capitalize;
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (hover: hover) {
+  .switch label:hover {
+    opacity: 1;
+  }
+}
+
+.switch input:checked ~ label {
+  opacity: 1;
+}
+
+.switchCompact {
+  position: absolute;
+  margin-left: 0 !important;
+  width: var(--switchSize);
+  color: transparent !important;
+  overflow: hidden;
+}

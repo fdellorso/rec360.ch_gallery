@@ -1,0 +1,22 @@
+/* Phone */
+@media (hover: none) {
+  @media (orientation: landscape) {
+    .gallery {
+      padding-right: var(--navSize);
+    }
+
+    .cards {
+      grid-template-columns: repeat(auto-fit, minmax(18%, 1fr));
+    }
+  }
+
+  @media (orientation: portrait) {
+    .gallery {
+      padding-bottom: var(--navSize);
+    }
+
+    .cards {
+      grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.carousel {
+  position: relative;
+  /* width: 90vh; */
+  overflow-x: hidden;
+}
+
+.carousel > .cursors > .left,
+.carousel > .cursors > .right {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+
+.carousel > .cursors > .left {
+  left: 0;
+}
+
+.carousel > .cursors > .right {
+  right: 0;
+}
+
+.carousel > .images {
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel > .images > img {
+  width: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+  user-select: none;
+}
+
+.carousel > .thumbnails {
+  position: absolute;
+  bottom: 1rem;
+  margin: 0 35% 0 35%;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.carousel > .thumbnails > div {
+  margin: 8px;
+}
+
+.carousel > .thumbnails > div > input {
+  display: none;
+}
+
+.carousel > .thumbnails > div > input:checked ~ label > img {
+  opacity: 1;
+}
+
+.carousel > .thumbnails > div > input:hover ~ label > img {
+  opacity: 1;
+}
+
+.carousel > .thumbnails > div > label {
+  user-select: none;
+}
+
+.carousel > .thumbnails > div > label > img {
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: cover;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}

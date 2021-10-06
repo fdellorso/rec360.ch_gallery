@@ -1,0 +1,108 @@
+.form {
+  --formSize: 2rem;
+  --formIcon: calc(var(--buttonSize) * 0.55);
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.form input[type='checkbox'] {
+  display: none;
+}
+
+.form input[type='checkbox']:checked ~ label {
+  opacity: 1;
+}
+
+@media screen and (orientation: landscape) {
+  .form input[type='checkbox']:checked ~ div {
+    width: 100vw;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .form input[type='checkbox']:checked ~ div {
+    width: 100vh;
+  }
+}
+
+.form > label {
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  height: var(--formSize);
+  background-color: rgb(255, 255, 255);
+  opacity: 0.5;
+  display: flex;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .form > label:hover {
+    opacity: 1;
+  }
+}
+
+.form > label > i {
+  border-radius: 50%;
+  width: var(--formSize);
+  height: var(--formSize);
+  font-size: var(--formIcon);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+
+.form > div {
+  width: 0;
+  display: inline-flex;
+  flex: 1 0 auto;
+  transition: width 0.5s;
+}
+
+.spanForm {
+  margin-right: 0.5rem;
+  height: var(--sliderSize);
+  font-size: var(--sliderLabel);
+  text-transform: capitalize;
+  display: inline-flex;
+  align-items: center;
+}
+
+.form > div > input[type='text'] {
+  height: var(--formSize);
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
+  flex: 9 0 auto;
+}
+
+.form > div > input:focus {
+  outline: none;
+}
+
+.form > div > button {
+  height: var(--formSize);
+  border-style: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0 0.5rem 0 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  flex: 1 0 auto;
+  text-transform: capitalize;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .form > div > button:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
+
+.formText {
+  display: none !important;
+}
+
+.formTextDiv {
+  width: auto !important;
+}

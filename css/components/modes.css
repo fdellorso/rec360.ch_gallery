@@ -1,0 +1,137 @@
+.modes {
+  --modesSize: 2rem;
+  --modesIcon: calc(var(--modesSize) * 0.55);
+  --modesLabel: calc(var(--modesSize) * 0.55);
+  width: var(--modesSize);
+  height: var(--modesSize);
+  border-radius: 50%;
+  display: flex;
+}
+
+.modes > input {
+  display: none;
+}
+
+.modes > label {
+  height: var(--modesSize);
+  opacity: 0.5;
+  display: flex;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.modes > label > i {
+  border-radius: 50%;
+  width: var(--modesSize);
+  height: var(--modesSize);
+  background-color: rgba(255, 255, 255, 0.33);
+  font-size: var(--modesIcon);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+
+.modes > label > span {
+  margin-left: 0.5rem;
+  height: var(--modesSize);
+  color: black;
+  font-size: var(--modesLabel);
+  text-transform: capitalize;
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (hover: hover) {
+  .modes > label:hover {
+    opacity: 1;
+  }
+}
+
+.modes > input:checked ~ label {
+  opacity: 1;
+}
+
+.modesText {
+  display: none !important;
+}
+
+.modesTextDiv {
+  width: auto !important;
+}
+
+.modesContrast {
+  color: white !important;
+}
+
+.modesIcon {
+  display: none !important;
+}
+
+.modesIconDiv {
+  overflow: hidden !important;
+}
+
+.modes > div {
+  display: flex;
+}
+
+.modes > div > span {
+  margin-left: 0.5rem;
+  height: var(--modesSize);
+  color: black;
+  font-size: var(--modesLabel);
+  text-transform: capitalize;
+  display: inline-flex;
+  align-items: center;
+}
+
+.modes > div > input {
+  display: none;
+}
+
+.modes > div > label {
+  height: var(--modesSize);
+  opacity: 0.5;
+  display: flex;
+  transition: opacity 0.3s;
+  /* display: inline-flex; */
+  /* align-items: center; */
+  cursor: pointer;
+}
+
+.modes > div > label > i {
+  border-radius: 50%;
+  width: var(--modesSize);
+  height: var(--modesSize);
+  background-color: rgba(255, 255, 255, 0.33);
+  font-size: var(--modesIcon);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+
+.modes > div > label > span {
+  margin-left: 0.5rem;
+  height: var(--modesSize);
+  color: black;
+  font-size: var(--modesLabel);
+  text-transform: capitalize;
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (hover: hover) {
+  .modes > div > label:hover {
+    opacity: 1;
+  }
+}
+
+.modes > div > input:checked + label {
+  opacity: 1;
+}
+
+.modes > div > input:checked .modes {
+  overflow: auto;
+}
