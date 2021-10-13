@@ -6,6 +6,7 @@ function createCarousel (imagesArray) {
   const imagesObject = createImagesObject(imagesArray)
 
   const divCarousel = createElement('div', 'carousel', 'carousel')
+  const mc = new Hammer(divCarousel)
 
   const divCursors = createElement('div', null, 'cursors', divCarousel)
   const divCursorLeft = createElement('div', null, 'left', divCursors)
@@ -38,7 +39,7 @@ function createCarousel (imagesArray) {
       inputAttr = inputAttr.concat(checkedAttribute)
     }
 
-    const input = createElement('input', null, 'selector', divThumbnail, inputAttr)
+    const input = createElement('input', 'thumbSwitch' + (index + 1), 'selector', divThumbnail, inputAttr)
     input.addEventListener('change', event => {
       carouselSwitch(parseInt(event.target.value, 10))
       event.target.blur()
@@ -53,6 +54,7 @@ function createCarousel (imagesArray) {
   })
 
   document.addEventListener('keydown', carouselRoll)
+  mc.on('swipe', carouselRoll)
 
   return divCarousel
 }
@@ -113,7 +115,7 @@ function carouselRoll (event) {
 
   let selected = null
 
-  if (event.key === 'ArrowLeft') {
+  if (event.key === 'ArrowLeft' || event.direction === Hammer.DIRECTION_RIGHT) {
     if ((current - 1) >= 0) {
       selected = selector[(current - 1) % selector.length]
       selected.checked = true
@@ -122,7 +124,7 @@ function carouselRoll (event) {
     }
   }
 
-  if (event.key === 'ArrowRight') {
+  if (event.key === 'ArrowRight' || event.direction === Hammer.DIRECTION_LEFT) {
     if ((current + 1) < selector.length) {
       selected = selector[(current + 1) % selector.length]
       selected.checked = true

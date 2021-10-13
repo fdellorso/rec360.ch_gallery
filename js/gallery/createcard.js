@@ -40,7 +40,8 @@ function createCard (parent) {
       { name: 'data-date', value: dateProperties },
       { name: 'data-time', value: listGallery[index].time_value }]
 
-    const anchorAttribute = [{ name: 'data-name', value: listGallery[index].name_value },
+    const anchorAttribute = [{ name: 'data-id', value: listGallery[index].gallery_id },
+      { name: 'data-name', value: listGallery[index].name_value },
       { name: 'data-media', value: listGallery[index].media_value },
       { name: 'data-quantity', value: listGallery[index].quantity },
       { name: 'data-date', value: dateProperties },

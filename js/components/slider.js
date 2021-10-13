@@ -2,7 +2,7 @@
 
 import { createElement } from '../utility/createelement.js'
 
-function createSlider (sliderId = 'slider', sliderEvent = '', sliderUpdate = '',
+function createSlider (sliderId = 'slider', sliderClass = '', sliderEvent = '', sliderUpdate = '',
   min = 0, max = 100, step = 10, value = 50,
   faicon = 'fa-circle', iconSlider = true) {
   const sliderName = sliderId.split('_')[1]
@@ -32,6 +32,7 @@ function createSlider (sliderId = 'slider', sliderEvent = '', sliderUpdate = '',
     { name: 'onchange', value: sliderEvent + '(this.id)' },
     { name: 'oninput', value: sliderUpdate + '(this.id)' }
   ])
+  inputSlider.classList.add(sliderClass)
   const labelSlider = createElement('label', 'l_' + sliderId, 'labelSlider', div, [
     { name: 'for', value: inputSlider.id }
   ])

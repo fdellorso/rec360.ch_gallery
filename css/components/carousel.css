@@ -53,12 +53,17 @@
   opacity: 1;
 }
 
-.carousel > .thumbnails > div > input:hover ~ label > img {
+/* .carousel > .thumbnails > div > input:hover ~ label > img {
+  opacity: 1;
+} */
+
+.carousel > .thumbnails > div > label:hover > img {
   opacity: 1;
 }
 
 .carousel > .thumbnails > div > label {
   user-select: none;
+  cursor: pointer;
 }
 
 .carousel > .thumbnails > div > label > img {
