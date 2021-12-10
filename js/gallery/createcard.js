@@ -19,7 +19,9 @@ const galleryDemo = [
   { gallery_id: 13, name_value: 'PHOTO_20211013_142937', media_value: 'photo360', quantity: 36, date_value: '06-10-2021', time_value: '12:00:00', new: true, published: false },
   { gallery_id: 14, name_value: 'PHOTO_20211013_142937_NOBG', media_value: 'photo360', quantity: 36, date_value: '06-10-2021', time_value: '12:00:00', new: true, published: false },
   { gallery_id: 15, name_value: 'PHOTO_20211013_143947', media_value: 'photo360', quantity: 36, date_value: '06-10-2021', time_value: '12:00:00', new: true, published: false },
-  { gallery_id: 16, name_value: 'PHOTO_20211013_143947_NOBG', media_value: 'photo360', quantity: 36, date_value: '06-10-2021', time_value: '12:00:00', new: true, published: false }
+  { gallery_id: 16, name_value: 'PHOTO_20211013_143947_NOBG', media_value: 'photo360', quantity: 36, date_value: '06-10-2021', time_value: '12:00:00', new: true, published: false },
+  { gallery_id: 17, name_value: 'PHOTO_20211126_115257', media_value: 'photo360', quantity: 36, date_value: '06-10-2021', time_value: '12:00:00', new: true, published: false },
+  { gallery_id: 18, name_value: 'PHOTO_20211126_131306', media_value: 'photo360', quantity: 36, date_value: '06-10-2021', time_value: '12:00:00', new: true, published: false }
 ]
 
 // async function getListGallery () {
